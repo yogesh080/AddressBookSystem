@@ -133,13 +133,19 @@ namespace AddressBookSystem
                             Console.WriteLine("Invalid Number:");
                             break;
                     }
-
                 }
-
             }
-
-
-
+        }
+        public void remove(string FullName)
+        {
+            for (int i = 0; i < People.Count; i++)
+            {
+                if (People[i].FirstName.ToLower() + " " + People[i].LastName.ToLower() == FullName.ToLower())
+                {
+                    People.RemoveAt(i);
+                }
+            }
+            ListPeople();
 
         }
     }
